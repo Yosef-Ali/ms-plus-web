@@ -22,7 +22,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <MainNav menuLinks={site.siteMetadata.menuLinks} />
-      <main id="primary" className="container mx-auto bg-slate-500">
+      <main id="primary" className="container px-4 py-6 mx-auto md:px-24">
         {children}
       </main>
       <Footer />

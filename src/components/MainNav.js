@@ -2,9 +2,8 @@ import React from "react"
 import { Link } from "gatsby"
 
 const MainNav = ({ menuLinks }) => {
-  console.log(menuLinks)
   return (
-    <nav className="container relative p-6 mx-auto">
+    <nav className="container relative px-4 py-6 mx-auto md:px-24">
       <div className="flex items-center justify-between">
         <div className="pt-2">
           <Link to="/">
@@ -24,7 +23,7 @@ const MainNav = ({ menuLinks }) => {
         {/* Button */}
         <Link
           to="#"
-          className="hidden p-3 px-6 pt-2 text-white rounded-full bg-brightRed baseline hover:bg-brightRedLight lg:block"
+          className="hidden p-3 px-8 text-white rounded-full bg-brightRed baseline hover:bg-brightRedLight lg:block"
         >
           Get Started
         </Link>
@@ -72,7 +71,7 @@ const MainNav = ({ menuLinks }) => {
         </button>
       </div>
       {/* Mobile Menu  */}
-      <div class="lg:hidden">
+      <div class="hidden">
         <ul
           id="menu"
           className="absolute flex-col items-center self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md"
