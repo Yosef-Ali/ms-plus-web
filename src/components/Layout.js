@@ -3,6 +3,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import PropTypes from "prop-types"
 import Footer from "./Footer"
 import MainNav from "./MainNav"
+import CTA from "./CTA"
+import Testimonials from "./Testimonials"
 const Layout = ({ children }) => {
   const menuLinks = []
   const { site } = useStaticQuery(graphql`
@@ -25,6 +27,8 @@ const Layout = ({ children }) => {
       <main id="primary" className="container px-4 py-6 mx-auto md:px-24">
         {children}
       </main>
+      <Testimonials />
+      <CTA />
       <Footer />
     </>
   )

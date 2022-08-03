@@ -8,7 +8,6 @@ const IndexPage = () => {
     <Layout>
       <Hero />
       <Features />
-      IndexPage
     </Layout>
   )
 }
