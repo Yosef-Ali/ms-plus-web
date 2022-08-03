@@ -1,3 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.background-container {
+  position: absolute;
+  overflow: hidden;
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2000px;
+  display: flex;
+  justify-content: center;
+}
+
+.bg-pattern {
+  position: absolute;
+  /* background-image: url(./bg-tablet-pattern.svg); */
+  background-image: url(../images/bg-tablet-pattern.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center top;
+  z-index: -1;
+}
+
+.bg1 {
+  width: 800px;
+  height: 800px;
+  transform: translateX(480px) translateY(-200px);
+}
+
+.bg2 {
+  opacity: 1;
+  width: 800px;
+  height: 800px;
+  transform: translateX(-950px) translateY(1100px);
+}
