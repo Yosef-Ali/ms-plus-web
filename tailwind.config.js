@@ -16,6 +16,10 @@ module.exports = {
     },
     extend: {
       colors: {
+        primary: "#3ababa",
+        secondary: "#154B77",
+        tertiary: "#4FC4E7",
+        quaternary: "#E0F5FB",
         brightRed: "hsl(12, 88%, 59%)",
         brightRedLight: "hsl(12, 88%, 69%)",
         brightRedSupLight: "hsl(12, 88%, 95%)",

@@ -1,13 +1,14 @@
 import React from "react"
 import { Link } from "gatsby"
+import scrollTo from "gatsby-plugin-smoothscroll"
 
 const Footer = props => {
   return (
-    <div className="w-full mx-auto bg-veryDarkBlue">
+    <div className="w-full mx-auto bg-secondary">
       <div className="container flex flex-col-reverse justify-between px-4 py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0 lg:px-16">
         {/* Logo and social links container */}
         <div className="flex flex-col-reverse items-center justify-between space-y-12 lg:flex-col lg:space-y-0 lg:items-start">
-          <div className="mx-auto my-6 text-center text-white lg:hidden">
+          <div className="mx-auto my-6 text-center text-gray-400 lg:hidden">
             Copyright &copy; 2022, All Rights Reserved
           </div>
           {/*  Logo */}
@@ -28,7 +29,7 @@ const Footer = props => {
             </a>
             {/*  Link 3  */}
             <a href="#">
-              <img src="./icon-twitter.svg" alt="" className="h-6" />
+              <img src="./icon-twitter.svg" alt="" className="h-6 " />
             </a>
             {/*  Link 4 */}
             <a href="#">
@@ -42,48 +43,53 @@ const Footer = props => {
         </div>
         {/*  List Container  */}
         <div className="flex justify-around space-x-32">
-          <div className="flex flex-col space-y-3 text-white">
-            <Link to="/" className="hover:text-brightRed">
+          <div className="flex flex-col space-y-3 text-gray-400">
+            <a
+              onClick={() => scrollTo("#home")}
+              className="hover:text-gray-200 hover:cursor-pointer"
+            >
               Home
-            </Link>
-            <Link to="#" className="hover:text-brightRed">
-              Pricing
-            </Link>
-            <Link to="#" className="hover:text-brightRed">
-              Products
-            </Link>
-            <Link to="#" className="hover:text-brightRed">
+            </a>
+            <a
+              onClick={() => scrollTo("#about")}
+              className="hover:text-gray-200 hover:cursor-pointer"
+            >
               About
-            </Link>
+            </a>
+            <a
+              onClick={() => scrollTo("#service")}
+              className="hover:text-gray-200 hover:cursor-pointer"
+            >
+              Service
+            </a>
+            <a
+              onClick={() => scrollTo("#contact")}
+              className="hover:text-gray-200 hover:cursor-pointer"
+            >
+              Contact
+            </a>
           </div>
-          <div className="flex flex-col space-y-3 text-white">
-            <Link to="#" className="hover:text-brightRed">
-              Careers
-            </Link>
-            <Link to="#" className="hover:text-brightRed">
-              Community
-            </Link>
-            <Link to="#" className="hover:text-brightRed">
+          <div className="flex flex-col space-y-3 text-gray-400">
+            <a to="#" className="hover:text-gray-200">
+              Gallery
+            </a>
+            <a to="#" className="hover:text-gray-200">
+              Resources
+            </a>
+            <a to="#" className="hover:text-gray-200">
               Privacy Policy
-            </Link>
+            </a>
           </div>
         </div>
 
         {/*  Input Container  */}
-        <div className="flex flex-col justify-between">
-          <form>
-            <div className="flex max-w-md mx-auto space-x-3">
-              <input
-                type="text"
-                className="flex-1 px-4 rounded-full focus:outline-none"
-                placeholder="Updated in your inbox"
-              />
-              <button className="px-6 py-2 text-white rounded-full bg-brightRed hover:bg-brightRedLight focus:outline-none">
-                Go
-              </button>
-            </div>
-          </form>
-          <div className="hidden text-white lg:block">
+        <div className="flex flex-col justify-between space-y-3 text-center lg:text-left">
+          <p className="text-lg font-semibold text-white">
+            MGSAMG Trading & Manufacturing PLC.
+          </p>
+          <p className="text-gray-400 ">St.Urael church on SHEGER Building </p>
+          <p className="text-gray-400 ">Addis Ababa, Ethiopia </p>
+          <div className="hidden text-gray-400 lg:block">
             Copyright &copy; 2022, All Rights Reserved
           </div>
         </div>

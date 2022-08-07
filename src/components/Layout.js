@@ -23,13 +23,15 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <MainNav menuLinks={site.siteMetadata.menuLinks} />
-      <main id="primary" className="container px-4 py-6 mx-auto md:px-24">
-        {children}
-      </main>
-      <Testimonials />
-      <CTA />
-      <Footer />
+      <div className="relative">
+        <MainNav menuLinks={site.siteMetadata.menuLinks} />
+        <main id="primary" className="container px-4 py-6 mx-auto md:px-24">
+          {children}
+        </main>
+        <Testimonials />
+        <CTA />
+        <Footer />
+      </div>
     </>
   )
 }

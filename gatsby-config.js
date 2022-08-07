@@ -1,30 +1,26 @@
 module.exports = {
   siteMetadata: {
-    title: `Manage Landing Page`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `MS-PLUS`,
+    description: `experienced marketing company which is currently striving to serve many organizations in their marketing needs. `,
     author: `Yosef`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
     logo: `/logo.png`,
     menuLinks: [
       {
-        name: `Pricing`,
-        link: `/`,
+        name: `Home`,
+        link: `home`,
       },
       {
-        name: `Product`,
-        link: `/product`,
+        name: `About `,
+        link: `about`,
       },
       {
-        name: `About Us`,
-        link: `/about us`,
+        name: `Service`,
+        link: `service`,
       },
       {
-        name: `Careers`,
-        link: `/careers`,
-      },
-      {
-        name: `Community`,
-        link: `/community`,
+        name: `Contact`,
+        link: `contact`,
       },
     ],
   },
@@ -57,5 +53,6 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    `gatsby-plugin-smoothscroll`,
   ],
 }
