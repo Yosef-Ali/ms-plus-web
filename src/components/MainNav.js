@@ -25,7 +25,6 @@ const MainNav = ({ menuLinks }) => {
                   <a
                     onClick={() => {
                       scrollTo(`#${props.link}`)
-                      console.log(props.link)
                     }}
                     className="hover:text-darkGrayishBlue hover:cursor-pointer"
                   >
@@ -106,7 +105,7 @@ const MainNav = ({ menuLinks }) => {
                   key={props.name}
                   className="text-center text-secondary hover:text-secondary/75"
                 >
-                  <Link to={props.link}>{props.name}</Link>
+                  <a to={props.link}>{props.name}</a>
                 </li>
               ))}
             </ul>

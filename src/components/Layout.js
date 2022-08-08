@@ -6,7 +6,6 @@ import MainNav from "./MainNav"
 import CTA from "./CTA"
 import Testimonials from "./Testimonials"
 const Layout = ({ children }) => {
-  const menuLinks = []
   const { site } = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -22,17 +21,15 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
-      <div className="relative">
-        <MainNav menuLinks={site.siteMetadata.menuLinks} />
-        <main id="primary" className="container px-4 py-6 mx-auto md:px-24">
-          {children}
-        </main>
-        <Testimonials />
-        <CTA />
-        <Footer />
-      </div>
-    </>
+    <div className="relative">
+      <MainNav menuLinks={site.siteMetadata.menuLinks} />
+      <main id="primary" className="container px-4 py-6 mx-auto md:px-24">
+        {children}
+      </main>
+      <Testimonials />
+      <CTA />
+      <Footer />
+    </div>
   )
 }
 

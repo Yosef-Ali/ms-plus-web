@@ -1,4 +1,5 @@
 import React from "react"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Service = () => {
   return (
@@ -18,7 +19,11 @@ const Service = () => {
           </p>
         </div>
         <div className="lg:w-1/2">
-          <img src="./illustration-service.svg" alt="" />
+          <StaticImage
+            src="../images/illustration-service.svg"
+            alt="service image"
+            placeholder="blurred"
+          />
         </div>
       </div>
       <div className="grid gap-8 row-gap-10 sm:grid-cols-2 lg:grid-cols-4">

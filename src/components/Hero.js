@@ -1,5 +1,7 @@
 import React from "react"
 import scrollTo from "gatsby-plugin-smoothscroll"
+import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Hero = () => {
   return (
@@ -18,17 +20,21 @@ const Hero = () => {
           reliable and immaculate services here in Ethiopia and abroad.
         </p>
         <div className="flex justify-center lg:justify-start">
-          <a
+          <Link
             onClick={() => scrollTo("#contact")}
             className="px-8 py-3 text-white rounded-full shadow-md bg-primary hover:shadow-none hover:cursor-pointer"
           >
             Get in touch
-          </a>
+          </Link>
         </div>
       </div>
       {/* <!-- Image --> */}
       <div className="lg:w-1/2">
-        <img src="./illustration-intro.svg" alt="" />
+        <StaticImage
+          src="../images/illustration-intro.svg"
+          alt="hero image"
+          placeholder="blurred"
+        />
       </div>
     </div>
   )
